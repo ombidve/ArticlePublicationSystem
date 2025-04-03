@@ -13,9 +13,9 @@ CREATE TABLE articles (
 );
 
 --inserting data into table authors
-INSERT INTO authors (author_id, author_name, author_email) VALUES (1, 'John Doe', 'john@gmail.com');
-INSERT INTO authors (author_id, author_name, author_email) VALUES (2, 'Jane Dole', 'jane@gmail.com');
-insert INTO authors (author_id, author_name, author_email) VALUES (3, 'Kevin Smith', 'kevin@gmail.com');
+INSERT INTO authors (author_id, author_name, author_email) VALUES (1, 'emiway bantai', 'emiway@gmail.com');
+INSERT INTO authors (author_id, author_name, author_email) VALUES (2, 'raftaar nair', 'raftaar@gmail.com');
+insert INTO authors (author_id, author_name, author_email) VALUES (3, 'Krsna Kaul', 'krsna@gmail.com');
 
 --inserting data into table articles
 INSERT INTO articles (article_id, article_name, article_content, author_id) VALUES (101, 'Pollution', '.............', 1);
@@ -26,10 +26,10 @@ INSERT INTO articles (article_id, article_name, article_content, author_id) VALU
 SELECT * FROM authors;
 SELECT * FROM articles;
 
---article written by john doe
+--article written by emiway bantai
 SELECT article.article_name, article.article_content 
 FROM articles, authors
-WHERE article.author_name = 'John Doe';
+WHERE article.author_name = 'emiway bantai';
 
 
 --we only want article name, article content and author name for those who have published articles
@@ -37,7 +37,7 @@ SELECT article.article_name, article.article_content, authors.author_name
 FROM articles, authors
 WHERE article.author_id = authors.author_id;
 
--- printing names of authors who's name starts with alphabet J
+-- printing names of authors who's name starts with alphabet K
 SELECT author_name
 FROM authors
-WHERE author_name LIKE 'J%';
+WHERE author_name LIKE 'K%';
